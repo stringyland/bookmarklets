@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>aria-invalid support chart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body class="body-wide">
+  <h1><code>aria-invalid</code> support chart</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <table>
+    <thead>
+     <tr>
+        <th>&nbsp;</th>
+        <th>VoiceOver Chrome</th>
+        <th>VoiceOver Firefox</th>
+        <th>VoiceOver Safari</th>
+        <th>NVDA Chrome</th>
+        <th>NVDA Firefox</th>
+        <th>NVDA Edge</th>
+        <th>JAWS Edge</th>
+        <th>JAWS Firefox</th>
+        <th>JAWS Edge</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><a href="invalid01.html"><code>&lt;input&gt;</code> with <code>aria-invalid="true"</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="invalid02.html"><code>&lt;input&gt;</code> with <code>aria-invalid="false"</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="invalid03.html"><code>&lt;input&gt;</code> with <code>aria-invalid="grammar"</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="partial-announced">Grammar not announced</td>
+        <td class="partial-announced">Grammar not announced</td>
+        <td class="partial-announced">Grammar not announced</td>
+      </tr>
+      <tr>
+        <th><a href="invalid04.html"><code>&lt;input&gt;</code> with <code>aria-invalid="spelling"</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="partial-announced">Spelling not announced</td>
+        <td class="partial-announced">Spelling not announced</td>
+        <td class="partial-announced">Spelling not announced</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

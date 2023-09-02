@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Help text and error message support chart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body class="body-wide">
+  <h1>Help text and error message support chart</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <table>
+    <thead>
+     <tr>
+        <th>&nbsp;</th>
+        <th>VoiceOver Chrome</th>
+        <th>VoiceOver Firefox</th>
+        <th>VoiceOver Safari</th>
+        <th>NVDA Chrome</th>
+        <th>NVDA Firefox</th>
+        <th>NVDA Edge</th>
+        <th>JAWS Edge</th>
+        <th>JAWS Firefox</th>
+        <th>JAWS Edge</th>
+     </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th><a href="input-help-text-wrapped-label.html"><code>&lt;input&gt;</code> with help text wrapped inside <code>&lt;label&gt;</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="not-announced">Additional content not announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-help-text-aria-describedby.html"><code>&lt;input&gt;</code> with help text using <code>aria-describedby</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-help-text-aria-label.html"><code>&lt;input&gt;</code> with help text as an <code>aria-label</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="not-announced">aria-label not announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr class="section">
+        <th><a href="input-error-message-wrapped-label.html"><code>&lt;input&gt;</code> with error message wrapped inside <code>&lt;label&gt;</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-error-message-aria-describedby.html"><code>&lt;input&gt;</code> with error message using <code>aria-describedby</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-error-message-aria-errormessage.html"><code>&lt;input&gt;</code> with error message using <code>aria-errormessage</code></a></th>
+        <td class="not-announced">Error message not announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="not-announced">Error message not announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-error-message-title.html"><code>&lt;input&gt;</code> with error message using <code>title</code></a></th>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+        <td class="announced">Announced - not recommended</td>
+      </tr>
+      <tr>
+        <th><a href="input-error-message-title-aria-describedby.html"><code>&lt;input&gt;</code> with error message using <code>aria-describedby</code> and <code>title</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+      <tr>
+        <th><a href="input-error-message-hidden-aria-describedby.html"><code>&lt;input&gt;</code> with error message using hidden <code>aria-describedby</code></a></th>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+        <td class="announced">Announced</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
