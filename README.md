@@ -1,4 +1,2 @@
-# accessible-forms
-A series of simple tests on accessible form controls
-
-https://russmaxdesign.github.io/accessible-forms/.
+# bookmarklets
+A series of bookmarklets for accessibility testing. Beginning with WAI's Easy Checks.
