@@ -2,83 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HTML test cases</title>
+  <title>Bookmarklets testing</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="favicon.ico">
   <link href="assets/css/examples.css" rel="stylesheet">
 </head>
 <body>
-  <h1>HTML test cases</h1>
-  <p>A series of HTML test cases to determine how they are announced in different screen reader / browser combinations.</p>
-  <p><a class="button-secondary small" href="https://github.com/russmaxdesign/accessible-forms" aria-label="Git repository for all tests" target="_blank">Git repository</a></p>
+  <h1>Testing: Bookmarklets</h1>
+  <p>A series of accessibility bookmarklets in progress.</p>
+  <p><a class="button-secondary small" href="https://github.com/stringyland/bookmarklets" target="_blank">Git repository (opens in a new window)</a></p>
 
   <section>
     <h2>Page content sections</h2>
     <ul class="page-contents-list" aria-label="Page contents">
-      <li>&darr; <a href="#basic">Basic form control and label tests</a></li>
-      <li>&darr; <a href="#fieldset"><code>&lt;fieldset&gt;</code> tests</a></li>
-      <li>&darr; <a href="#fieldset-error"><code>&lt;fieldset&gt;</code> with errors tests</a></li>
-      <li>&darr; <a href="#nested">Nested <code>&lt;fieldset&gt;</code> tests</a></li>
-      <li>&darr; <a href="#help">Help text and error messages associated with form control tests</a></li>
-      <li>&darr; <a href="#required">Required field tests</a></li>
-      <li>&darr; <a href="#accessible-button"><code>&lt;button&gt;</code> accessible name and description tests</a></li>
-      <li>&darr; <a href="#accessible-link"><code>&lt;a&gt;</code> accessible name and description tests</a></li>
-      <li>&darr; <a href="#accessible-input"><code>&lt;input&gt;</code> accessible name and description tests</a></li>
-      <li>&darr; <a href="#accessible-table"><code>&lt;table&gt;</code> accessible name and description tests</a></li>
-      <li>&darr; <a href="#invalid"><code>aria-invalid</code> tests</a></li>
-      <li>&darr; <a href="#attributes">Form-based attribute tests</a></li>
-      <li>&darr; <a href="#disabled"><code>disabled</code> attribute tests</a></li>
-      <li>&darr; <a href="#readonly"><code>readonly</code> and <code>aria-readonly</code> attribute tests</a></li>
-      <li>&darr; <a href="#landmark">ARIA landmark tests</a></li>
-      <li>&darr; <a href="#header"><code>&lt;header&gt;</code> scope tests</a></li>
-      <li>&darr; <a href="#live">Live region tests</a></li>
-      <li>&darr; <a href="#onsubmit">onsubmit tests</a></li>
-      <li>&darr; <a href="#modal">Modal dialog tests</a></li>
-      <li>&darr; <a href="#rotor">VoiceOver Rotor tests</a></li>
-      <li>&darr; <a href="#technology">Technology details</a></li>
+      <li>&darr; <a href="#headings">Headings tests</a></li>
     </ul>
   </section>
   <hr>
 
-  <section id="basic">
-    <h2>Basic form control and label tests</h2>
-    <p>Tests to determine how form controls and their associated <code>&lt;label&gt;</code> and <code>&lt;legend&gt;</code> elements are announced. In some cases, the form element does not require or should not have a <code>&lt;label&gt;</code>.</p>
-    <h3>Inputs</h3>
+  <section id="headings">
+    <h2>Headings tests</h2>
+    <p>Tests to determine how best to test heading accessibility with a bookmarklet.</p>
+    <h3>Bookmarklets</h3>
     <ul class="main-list">
       <li>&rarr; <a href="01-input-button.html"><code>&lt;input type="button"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-checkbox.html"><code>&lt;input type="checkbox"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-color.html"><code>&lt;input type="color"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-date.html"><code>&lt;input type="date"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-datetime-local.html"><code>&lt;input type="datetime-local"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-email.html"><code>&lt;input type="email"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-file.html"><code>&lt;input type="file"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-month.html"><code>&lt;input type="month"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-number.html"><code>&lt;input type="number"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-password.html"><code>&lt;input type="password"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-radio.html"><code>&lt;input type="radio"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-range.html"><code>&lt;input type="range"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-reset.html"><code>&lt;input type="reset"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-search.html"><code>&lt;input type="search"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-submit.html"><code>&lt;input type="submit"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-tel.html"><code>&lt;input type="tel"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-text.html"><code>&lt;input type="text"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-time.html"><code>&lt;input type="time"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-url.html"><code>&lt;input type="url"&gt;</code></a></li>
-      <li>&rarr; <a href="01-input-week.html"><code>&lt;input type="week"&gt;</code></a></li>
     </ul>
-    <h3>Other elements</h3>
+    <h3>Tests</h3>
     <ul class="main-list">
       <li>&rarr; <a href="04-button.html"><code>&lt;button&gt;</code></a></li>
-      <li>&rarr; <a href="02-select.html"><code>&lt;select&gt;</code></a></li>
-      <li>&rarr; <a href="02-select-multiple.html"><code>&lt;select&gt;</code> with <code>multiple</code></a></li>
-      <li>&rarr; <a href="02-select-optgroup.html"><code>&lt;optgroup&gt;</code> within <code>&lt;select&gt;</code></a></li>
-      <li>&rarr; <a href="03-textarea.html"><code>&lt;textarea&gt;</code></a></li>
     </ul>
-    <p><a class="button-secondary small" href="support-basic-form-controls.html">Basic form controls support chart</a></p>
+    <p><a class="button-secondary small" href="support-basic-form-controls.html">Heading bookmarklet support chart</a></p>
   </section>
   <hr>
 
-  <section id="fieldset">
+  <!--<section id="fieldset">
     <h2><code>&lt;fieldset&gt;</code> tests</h2>
     <p>Tests to determine how <code>&lt;fieldset&gt;</code> elements are announced.</p>
     <ul class="main-list">
@@ -453,26 +410,25 @@
     <p><a href="x-other-tests/index.html">Other tests</a></p>
   </section>
   <hr>
+-->
 
   <section class="details">
     <h2 id="technology">Technology details</h2>
-    <p>OSX Catalina - 10.15.7</p>
+    <p>Windows 10:</p>
     <ul>
-      <li>Chrome 88</li>
-      <li>Firefox 86</li>
-      <li>Safari 14</li>
-    </ul>
-    <p>Windows 10 Enterprise:</p>
-    <ul>
-      <li>Chrome 87</li>
-      <li>Firefox 86</li>
+      <li>Chrome 116</li>
+      <li>Firefox 116</li>
       <li>Edge 88</li>
     </ul>
+		<p>iOS 16</p>
+		<ul>
+			<li>Safari</li>
+		</ul>
     <p>Assistive Technologies</p>
     <ul>
       <li>VoiceOver</li>
-      <li>NVDA - 2020.4</li>
-      <li>JAWS 2021.2102.34 - February 2021</li>
+      <li>NVDA 2021.3</li>
+      <li>JAWS 2022</li>
     </ul>
   </section>
 </body>
