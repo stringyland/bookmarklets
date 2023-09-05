@@ -15,23 +15,67 @@
 	<h2>HTML with visually-hidden heading</h2>
 	<div class="example">
 		<h1>Start a new heading "section" of the page with H1</h1>
-		<h2 class="">Visually-hidden heading</h2>
-		<h4>Then carry on with correct levels</h4>
+		<h2 class="hidden-visually">Visually-hidden heading</h2>
+		<h3>Then carry on with correct levels</h3>
 	</div>
+
+	<h2>ARIA with visually-hidden heading</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">Starting again with ARIA</div>
+		<div role="heading" aria-level="2" class="hidden-visually">ARIA and visually-hidden</div>
+		<div role="heading" aria-level="3">Then another ARIA heading</div>
+	</div>
+
+	<h2>HTML but one is hidden from everyone</h2>
+	<div class="example">
+		<h1>Starting again with HTML</h1>
+		<h2 class="hidden-all">Hidden with CSS</h2>
+		<h3>Then another HTML heading</h3>
+	</div>
+
+	<h2>ARIA but one is hidden from everyone</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">Another new ARIA heading group</div>
+		<div role="heading" aria-level="2" class="hidden-all">ARIA and hidden from everyone</div>
+		<div role="heading" aria-level="3">Then another ARIA heading</div>
+	</div>
+
+	<h2>HTML but one is hidden from screen readers</h2>
+	<div class="example">
+		<h1>Yes, we're starting again</h1>
+		<h2 aria-hidden="true">Hiding with <code>aria-hidden</code></h2>
+		<h3>Then another HTML heading</h3>
+	</div>
+
+	<h2>ARIA but one is hidden from screen readers</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">One last ARIA heading group</div>
+		<div role="heading" aria-level="2" aria-hidden="true">ARIA but hidden from the a11y API</div>
+		<div role="heading" aria-level="3">This is the last example heading</div>
+	</div>
+
+	
 
   <h2>Results</h2>
   <div class="note">
     <h3>Expected</h3>
 		<ul>
-			<li>The second heading in the example section should be flagged as an error.</li>
-			<li>The error flag should describe the problem.</li>
+			<li>The visually-hidden headings should be displayed in the panel's list with no warnings or errors.</li>
+			<li>The hidden-all headings should create a skipped level error on the following heading.</li>
+			<li>The <code>aria-hidden</code> headings should create a skipped level error on the following heading.</li>
+			<li>The Show Hidden toggle lists the number of hidden headings, and toggles their visibility in the panel.</li>
+			<li>The Mark Hidden toggle creates a distinct visual style for visually-hidden headings.</li>
 			<li>Other headings from the page are displayed with no warnings or errors.</li>
 		</ul>
   </div>
   <div class="note">
     <h3>Actual as of 2023-09-05</h3>
     <ul>
-      <li>The second heading is correctly flagged with an error style.</li>
+      <li>Visually-hidden headings displayed as expected.</li>
+			<li>Hidden-all headings create a skipped level error as expected.</li>
+			<li><code>aria-hidden</code> headings create a skipped level error as expected.</li>
+			<li>The Show Hidden toggle works as expected. Hidden headings are struck-out and greyed-out (low contrast).</li>
+			<li>The Mark Visually Hidden toggle works as expected.</li>
       <li>The error style does not include a description of the problem.</li>
     </ul>
   </div>
