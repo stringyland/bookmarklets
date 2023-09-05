@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Incorrectly marked up headings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Incorrectly formed headings</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with incorrectly marked up ARIA headings. </p>
+  
+	<h2>ARIA examples</h2>
+	<div class="example">
+		<div role="heading">Missing the level</div>
+		<div aria-level="2">Missing the role</div>
+		<div aria-role="heading" aria-level="3">Role attribute is incorrect</div>
+		<div aria-role="heading">Incorrect role attribute and no level</div>
+	</div>
+
+  <h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>For each heading in the example section, it is either not listed in the panel, or is listed with an error flagged.</li>
+			<li>Each error flag should describe the problem.</li>
+			<li>Other headings from the page content displayed with no warnings or errors.</li>
+		</ul>
+  </div>
+  <div class="note">
+    <h3>Actual as of 2023-09-05</h3>
+    <ul>
+      <li>Missing <code>aria-level</code>: flagged by NaN (not a number). No style change. </li>
+      <li>The remaining example headings are not listed in the panel.</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>

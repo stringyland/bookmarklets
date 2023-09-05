@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Correctly marked up headings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Correctly formed headings</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with correctly formed headings.</p>
+  <h2>HTML Examples</h2>
+	<div class="example">
+		<h1>Test heading</h1>
+		<h2>Another test heading</h2>
+		<h3>A third test heading</h3>
+		<h4>Oh look it's another heading</h4>
+		<h5>You guessed it</h5>
+		<h6>One last HTML heading</h6>
+	</div>
+
+  <h2>ARIA examples</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">First ARIA heading</div>
+		<div role="heading" aria-level="2">ARIA headings need a role</div>
+		<div role="heading" aria-level="3">And they need a level</div>
+		<div role="heading" aria-level="4">To be correctly formed</div>
+		<div role="heading" aria-level="5">The default level is 2</div>
+		<div role="heading" aria-level="6">But there are 6 levels total</div>
+	</div>
+
+  <h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>A list of headings from the 2 example sections</li>
+			<li>Each heading listed has it's level marked, and is indented to reflect structure</li>
+			<li>No errors or warnings</li>
+			<li>Other headings from the page content displayed as expected</li>
+		</ul>
+  </div>
+  <div class="note">
+    <h3>Actual</h3>
+    <ul>
+      <li>As expected.</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>

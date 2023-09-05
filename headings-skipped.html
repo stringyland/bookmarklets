@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Headings with levels skipped</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Headings with levels skipped</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with a heading structure that skips levels. </p>
+  
+	<h2>HTML example</h2>
+	<div class="example">
+		<h1>Start a new heading "section" of the page with H1</h1>
+		<h3>But skip past H2</h3>
+		<h4>Then carry on with correct levels</h4>
+	</div>
+
+	<h2>ARIA example</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">Start a new heading "section" of the page with an ARIA heading</div>
+		<div role="heading" aria-level="3">But skip past level 2</div>
+		<div role="heading" aria-level="4">Then carry on with correct levels</div>
+	</div>
+
+  <h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>The second heading in both example sections should be flagged as an error.</li>
+			<li>The error flag should describe the problem.</li>
+			<li>Other headings from the page are displayed with no warnings or errors.</li>
+		</ul>
+  </div>
+  <div class="note">
+    <h3>Actual as of 2023-09-05</h3>
+    <ul>
+      <li>The second headings are correctly flagged with an error style.</li>
+      <li>The error style does not include a description of the problem.</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>
