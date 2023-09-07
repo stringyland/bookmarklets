@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Headings with some visually hidden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Headings with some visually hidden</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with a heading structure when some levels have been visually-hidden. </p>
+  
+	<h2>HTML with visually-hidden heading</h2>
+	<div class="example">
+		<h1>Start a new heading "section" of the page with H1</h1>
+		<h2 class="hidden-visually">Visually-hidden heading</h2>
+		<h3>Then carry on with correct levels</h3>
+	</div>
+
+	<h2>ARIA with visually-hidden heading</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">Starting again with ARIA</div>
+		<div role="heading" aria-level="2" class="hidden-visually">ARIA and visually-hidden</div>
+		<div role="heading" aria-level="3">Then another ARIA heading</div>
+	</div>
+
+	<h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>The visually-hidden headings should be displayed in the panel's list with no warnings or errors.</li>
+			<li>The Mark Hidden toggle creates a distinct visual style for visually-hidden headings.</li>
+			<li>Other headings from the page are displayed with no warnings or errors.</li>
+		</ul>
+  </div>
+  <div class="note">
+		<h3>Actual as of 2023-09-07</h3>
+    <ul>
+      <li>As expected</li>
+    </ul>
+    <h3>Actual as of 2023-09-05</h3>
+    <ul>
+      <li>As expected, but the flagged headings do not include a description of the flag.</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>
