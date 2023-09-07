@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Headings with some hidden from assistive tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Headings with some hidden from assistive tech</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with a heading structure when some are hidden from the accessibility API, and therefore also hidden from screen readers. </p>
+  
+	<h2>HTML but one is hidden from screen readers</h2>
+	<div class="example">
+		<h1>Yes, we're starting again</h1>
+		<h2 aria-hidden="true">Hiding with <code>aria-hidden</code></h2>
+		<h3>Then another HTML heading</h3>
+	</div>
+
+	<h2>ARIA but one is hidden from screen readers</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">One last ARIA heading group</div>
+		<div role="heading" aria-level="2" aria-hidden="true">ARIA but hidden from the a11y API</div>
+		<div role="heading" aria-level="3">This is the last example heading</div>
+	</div>
+
+	
+
+  <h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>The <code>aria-hidden</code> headings should create a skipped level error on the following heading.</li>
+			<li>The Show Hidden toggle lists the number of hidden headings, and toggles their visibility in the panel.</li>
+			<li>Other headings from the page are displayed with no warnings or errors.</li>
+		</ul>
+  </div>
+  <div class="note">
+		<h3>Actual as of 2023-09-07</h3>
+    <ul>
+      <li>As expected</li>
+    </ul>
+    <h3>Actual as of 2023-09-05</h3>
+    <ul>
+      <li>As expected, but the flagged headings do not include a description of the flag.</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>

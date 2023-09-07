@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Headings with some hidden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="assets/css/examples.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Headings with some hidden</h1>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+  <p>This is a test case designed to determine how the Easy Checks heading bookmarklet deals with a heading structure when some headings are hidden from everyone. </p>
+  
+	<h2>HTML but one is hidden from everyone</h2>
+	<div class="example">
+		<h1>Starting again with HTML</h1>
+		<h2 class="hidden-all">Hidden with CSS</h2>
+		<h3>Then another HTML heading</h3>
+	</div>
+
+	<h2>ARIA but one is hidden from everyone</h2>
+	<div class="example">
+		<div role="heading" aria-level="1">Another new ARIA heading group</div>
+		<div role="heading" aria-level="2" class="hidden-all">ARIA and hidden from everyone</div>
+		<div role="heading" aria-level="3">Then another ARIA heading</div>
+	</div>
+
+
+  <h2>Results</h2>
+  <div class="note">
+    <h3>Expected</h3>
+		<ul>
+			<li>The hidden-all headings should create a skipped level error on the following heading.</li>
+			<li>Toggling the Show Hidden option should show and hide the headings causing the skipped level problem.</li>
+			<li>Other headings from the page are displayed with no warnings or errors.</li>
+		</ul>
+  </div>
+  <div class="note">
+		<h3>Actual as of 2023-09-07</h3>
+    <ul>
+      <li>As expected</li>
+    </ul>
+  </div>
+  <p>&larr; <a href="index.html">Return to main list</a></p>
+</body>
+</html>
