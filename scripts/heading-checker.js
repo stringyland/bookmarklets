@@ -55,10 +55,11 @@ javascript: {
         output = output + ('" style="margin-left: ' + data.level + 'em;">');
         output = output + ('<a href="#' + i + '" target="_top">');
         output = output + ('<span class="level" data-level="' + data.level + '">' + data.level + '</span> ');
-        output = output + ('<span class="text">' + htmlEntities(el.textContent.replace(/\s+/g, " ")) + "</span>");
+        output = output + ('<span class="text">' + htmlEntities(el.textContent.replace(/\s+/g, " ")) );
+				output = output + (data.wrong ? " (skipped level)" : "");
+				output = output + (data.visible ? "" : " (hidden)");
+				output = output + "</span>";
         output = output + "</a>";
-				output = output + (data.wrong ? "(skipped level)" : "");
-				output = output + (data.visible ? "" : "(hidden)");
         output = output + "</li>";
       }
       return '<ul id="headings">' + output + "</ul>";
