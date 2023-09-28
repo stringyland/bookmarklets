@@ -31,6 +31,7 @@ javascript: {
       return instance;
     }
     function check(e, key) {
+			console.log("function: check");
       var tasks = 0;
       var i = 0;
       for (; i < e.length; i++) {
@@ -41,6 +42,7 @@ javascript: {
       return tasks;
     }
     function parse(options) {
+			console.log("function: parse");
       var output = "";
       var i = 0;
       for (; i < options.length; i++) {
@@ -65,6 +67,7 @@ javascript: {
       return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
     }
     function isVisible(elem) {
+			console.log("function: isVisible");
       var style = window.getComputedStyle(elem);
       var i = false;
       for (; elem;) {
@@ -103,6 +106,7 @@ javascript: {
       }
     }
     function init(element, animate) {
+			console.log("function: init");
       if (!animate) {
         if (element.scrollIntoViewIfNeeded) {
           element.scrollIntoViewIfNeeded();
@@ -142,6 +146,7 @@ javascript: {
       }, 100);
     }
     function register(t) {
+			console.log("function: register");
       var init = function() {
         if (t.checked) {
           initFileListMenu();
@@ -153,6 +158,7 @@ javascript: {
       t.addEventListener("click", init);
     }
     function hide(time) {
+			console.log("function: hide");
       var args = doc.querySelectorAll("#headings a");
       var i = args.length - 1;
       for (; i >= 0; i--) {
@@ -164,6 +170,7 @@ javascript: {
       }
     }
     function remove(evt) {
+			console.log("function: remove");
       var liTag = evt.target;
       var parentNode = document.body.querySelectorAll("*");
       var o = false;
@@ -260,7 +267,8 @@ javascript: {
       f("o-visuallyhidden", "mark-visuallyhidden");
       register(doc.getElementById("o-highlight"));
       load();
-      doc.addEventListener("mouseover", function(e) {
+      doc.addEventListener("click", function(e) {
+				console.log("function: unnamed mouseover thing at the end");
         var t;
         if ("A" === e.target.nodeName.toUpperCase() ? t = e.target : e.target.parentElement && "A" === e.target.parentElement.nodeName.toUpperCase() && (t = e.target.parentElement), t) {
           var j = parseInt(t.getAttribute("href").substr(1), 10);
